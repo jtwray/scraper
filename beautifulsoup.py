@@ -16,6 +16,6 @@ page_soup = soup(page_html, 'html.parser')
 containers = page_soup.findAll("div",{"class":"s-item-container"})
 
 for container in containers:
-    #brand = container.div.div.div.div.div.div.a.img.s-access-image.cfMarker
-    title_container = container_.div.div.div.div.div.a.img["alt"]
-    
+    brand = container.findAll("span",{"class":"a-size-small a-color-secondary"})[1].text
+    title_container = container.div.div.div.div.div.a.img["alt"]
+    price = container.findAll("span",{"class":"a-offscreen"})[0].text
