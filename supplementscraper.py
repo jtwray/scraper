@@ -14,7 +14,11 @@ page_soup = soup(page_html, 'html.parser')
 
 # grabs each product
 containers = page_soup.findAll("div",{"class":"s-item-container"})
+filename = "Supplements.csv"
+f = open(filename,"w")
+headers = ("brand, product_name, price\n")
 
+f.write(headers)
 for container in containers:
     try: brand = container.findAll("span",{"class":"a-size-small a-color-secondary"})[1].text
     except Exception as e:
@@ -30,3 +34,7 @@ for container in containers:
     print("brand: " + brand)
     print("product_name: " + product_name)
     print("price: " + price)
+
+    f.write(brand + "," + product_name.replace(",","|") + "," + price + "\n")
+
+f.close()
