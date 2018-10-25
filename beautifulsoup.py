@@ -18,4 +18,5 @@ containers = page_soup.findAll("div",{"class":"s-item-container"})
 for container in containers:
     brand = container.findAll("span",{"class":"a-size-small a-color-secondary"})[1].text
     title_container = container.div.div.div.div.div.a.img["alt"]
+    product_name = title_container
     price = container.findAll("span",{"class":"a-offscreen"})[0].text
