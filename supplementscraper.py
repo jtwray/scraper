@@ -20,7 +20,7 @@ for container in containers:
     title_container = container.div.div.div.div.div.a.img["alt"]
     product_name = title_container
     try:  price = container.find("span",{"class":"a-offscreen"}).text
-        except Exception as e:
+    except Exception as e:
         continue
 
     print("brand: " + brand)
