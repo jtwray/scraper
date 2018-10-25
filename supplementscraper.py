@@ -16,9 +16,13 @@ page_soup = soup(page_html, 'html.parser')
 containers = page_soup.findAll("div",{"class":"s-item-container"})
 
 for container in containers:
-    brand = container.findAll("span",{"class":"a-size-small a-color-secondary"})[1].text
+    try: brand = container.findAll("span",{"class":"a-size-small a-color-secondary"})[1].text
+    except Exception as e:
+        continue
     title_container = container.div.div.div.div.div.a.img["alt"]
-    product_name = title_container
+    try:product_name = title_container
+    except Exception as e:
+        continue
     try:  price = container.find("span",{"class":"a-offscreen"}).text
     except Exception as e:
         continue
