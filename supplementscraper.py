@@ -19,7 +19,9 @@ for container in containers:
     brand = container.findAll("span",{"class":"a-size-small a-color-secondary"})[1].text
     title_container = container.div.div.div.div.div.a.img["alt"]
     product_name = title_container
-    price = container.find("span",{"class":"a-offscreen"}).text
+    try:  price = container.find("span",{"class":"a-offscreen"}).text
+        except Exception as e:
+        continue
 
     print("brand: " + brand)
     print("product_name: " + product_name)
