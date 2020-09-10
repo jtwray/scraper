@@ -13,13 +13,13 @@ These parameters would be used to compile and return an ordered list of relevant
 
 This will be a python script, as that is the language im most proficient so far in my coding career.
 Im using the atom editor and beautiful soup 4 as well as cmder command line
-Python v 3.6
-Atom
-Beautiful Soup 4
-CMDER
+ - Python v 3.6
+ - Atom
+ - Beautiful Soup 4
+ - CMDER
 
 What i have put together so far is based on a YouTube video I'm emulating:
-"(45)Intro to Web Scraping with Python and Beautiful Soup" by
+"Intro to Web Scraping with Python and Beautiful Soup" by
 'Data Science Dojo'.
 
 Indirect guidance from Rafeh Qazi's youtube channel, the 'Clever Programmer' as well as his program the 'Profitable Programmer'
